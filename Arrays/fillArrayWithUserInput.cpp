@@ -22,9 +22,9 @@ int main()
 
     std::cout << "You like the follow foods:\n";
 
-    for (std::string food : foods)
+    for (int i = 0; !foods[i].empty(); +i++)
     {
-        std::cout << food << '\n';
+        std::cout << foods[i] << '\n';
     }
     return 0;
 }
