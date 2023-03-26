@@ -20,7 +20,7 @@ int main()
         }
     }
 
-    std::cout << "You like the follow foods:\n";
+    std::cout << "You like the follow food(s):\n";
 
     for (int i = 0; !foods[i].empty(); +i++)
     {
