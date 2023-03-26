@@ -20,7 +20,7 @@ int main()
     }
     else
     {
-        std::cout << "My num is not in the array.\n";
+        std::cout << myNum << "s not in the array.\n";
     }
     return 0;
 }
