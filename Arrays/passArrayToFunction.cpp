@@ -12,6 +12,7 @@ int main()
     std::cout << "£" << total;
     return 0;
 }
+
 double getTotal(double prices[], int size)
 {
     double total = 0;
