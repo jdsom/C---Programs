@@ -22,7 +22,7 @@ int main()
 
     std::cout << "You like the follow food(s):\n";
 
-    for (int i = 0; !foods[i].empty(); +i++)
+    for (int i = 0; !foods[i].empty(); i++)
     {
         std::cout << foods[i] << '\n';
     }
