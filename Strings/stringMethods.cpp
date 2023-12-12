@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <string>
 int main()
 {
 
@@ -14,7 +14,7 @@ int main()
     }
     else
     {
-        std::cout << "Wecome " << name;
+        std::cout << "Welcome " << name;
     }
 
     return 0;
