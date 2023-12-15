@@ -2,7 +2,6 @@
 
 int mysum (int, int);
 int multiplereturns(int);
-void helloworld();
 
 int main(){
 
@@ -19,8 +18,6 @@ int main(){
 
     std::cout << "The sum of these two numbers is: " << sum << "\n";
    
-    helloworld();
-
     int num3;
     std::cout << "Please enter a value: "; 
     std::cin >> num3;
@@ -31,10 +28,6 @@ int main(){
 int mysum(int x, int y){
 
     return x+y;
-}
-
-void helloworld(){
-    std::cout << "Hello World!\n";
 }
 
 int multiplereturns(int x){
