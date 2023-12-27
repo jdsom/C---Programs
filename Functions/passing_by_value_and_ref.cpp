@@ -1,7 +1,7 @@
 #include <iostream>
 
 void passByValueFunc(int refer); //passing by value creates a copy of the value and doesn't modify the original
-void referenceFunc(int &refer); //passing by function allows the value to be modified
+void referenceFunc(int &refer); //passing by reference allows the value to be modified
 
 int main(){
 
