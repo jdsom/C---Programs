@@ -40,7 +40,7 @@ public:
 
 int main() {
     MyClass o; // Create an object
-    o.x = 123; // Error, x has private access and is not accessible to
+    //o.x = 123; Error, x has private access and is not accessible to
                 // object o
     o.printx(); // printx() is accessible from object o
 
