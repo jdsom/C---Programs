@@ -5,15 +5,15 @@ class MyClass{
         int x, y;
 
         MyClass(int xx, int yy)
+            : x{xx}, y{yy} // member initializer list
         {
-            x = xx;
-            y = yy;
+            std::cout << "User defined constructor.\n";
         }
 };
 
 int main()
 {
     MyClass o{1, 2}; // invoke a user-provided constructor
-    std::cout << "User-provided constructor invoked." << '\n';
     std::cout << o.x << ' ' << o.y;
+    return 0;
 }
