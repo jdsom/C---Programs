@@ -24,4 +24,5 @@ int main(){
     getUserInfo(Kwame);
     getUserInfo(Jordan);
     return 0;
+    
 }
