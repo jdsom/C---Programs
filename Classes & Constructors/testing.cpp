@@ -8,7 +8,7 @@ class User{
         int* Rates;
         int RatesCounter;
 
-        User(std::string fn, std::string ln, int age)
+        User(std::string fn, std::string ln, int age) // User-Defined Constructor with parameters
             : First{fn}, Last{ln}, Age{age}
             {
                 RatesCounter = 2;
@@ -30,7 +30,7 @@ class User{
             Rates = nullptr;
         }
 
-        User(const User& original){
+        User(const User& original){ // User-Defined Copy Constructor
             First = original.First;
             Last = original.Last;
             Age = original.Age;
@@ -49,10 +49,12 @@ void getUserInfo(User u){
 }
 
 int main(){
-    User Jordan("Jordan", "Sommerville", 26);
+    User Jordan("Jordan", "Sommerville", 26); //invoking user-defined constructor
     User Kwame("Kwame", "Yamoah", 27);
+
+    User Jordan2(Jordan); // User defined copy constructor will be invoked
     
-    getUserInfo(Kwame);
+    getUserInfo(Kwame); // Calling function with object as argument to output initialized variables
     getUserInfo(Jordan);
     return 0;
     
