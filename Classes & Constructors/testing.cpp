@@ -2,18 +2,37 @@
 
 class User{
     public:
-        std::string first;
-        std::string last;
-        int age;
+        std::string First;
+        std::string Last;
+        int Age;
+        int* Rates;
+        int RatesCounter;
 
-        User(std::string fn, std::string ln, int agee)
-            : first{fn}, last{ln}, age{agee}
+        User(std::string fn, std::string ln, int age)
+            : First{fn}, Last{ln}, Age{age}
             {
+                RatesCounter = 2;
+                Rates = new int {RatesCounter};
+                Rates[0] = 4;
+                Rates[1] = 5;
             }
+
+        // User(){};  Default Constructor
+
+       /*User(){      Default Constructor with initialization
+            first = "";
+            last = "";
+            age = 0;
+        }; */
+
+        ~User(){ // Destructor
+            delete [] Rates;
+            Rates = nullptr;
+        }
 };
 
 void getUserInfo(User u){
-    std::cout << "User's name is " << u.first+" "+ u.last << " and he is " << u.age
+    std::cout << "User's name is " << u.First+" "+ u.Last << " and he is " << u.Age
         << " years old.\n";
 }
 
