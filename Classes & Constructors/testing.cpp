@@ -29,6 +29,18 @@ class User{
             delete [] Rates;
             Rates = nullptr;
         }
+
+        User(const User& original){
+            First = original.First;
+            Last = original.Last;
+            Age = original.Age;
+            RatesCounter = original.RatesCounter;
+
+            Rates = new int[RatesCounter];
+            for (int i = 0; i < RatesCounter; i++){
+                Rates[i] = original.Rates[i];
+            }
+        }
 };
 
 void getUserInfo(User u){
