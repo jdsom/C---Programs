@@ -1,8 +1,6 @@
 #include <iostream>
 
-int doubleNumber(int x){
-    return x*2;
-}
+int doubleNumber(int x);
 
 
 int main(){
@@ -12,4 +10,8 @@ int main(){
     std::cout << "Enter a number: " << std::endl;
     std::cin >> num;
     std::cout << doubleNumber(num) << std::endl;
+}
+
+int doubleNumber(int x){
+    return x*2;
 }
