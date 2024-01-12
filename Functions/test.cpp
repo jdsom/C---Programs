@@ -1,6 +1,6 @@
 #include <iostream>
 
-int doubleNumber(int x);
+int doubleNumber(int x); //function declaration
 
 
 int main(){
