@@ -1,6 +1,8 @@
 #include <iostream>
 
 class User{
+    static int totalUsers; 
+    
     public:
         std::string First;
         std::string Last;
@@ -12,9 +14,10 @@ class User{
             : First{fn}, Last{ln}, Age{age}
             {
                 RatesCounter = 2;
-                Rates = new int {RatesCounter};
+                Rates = new int [RatesCounter];
                 Rates[0] = 4;
                 Rates[1] = 5;
+                totalUsers++;
             }
 
         // User(){};  Default Constructor
@@ -35,11 +38,17 @@ class User{
             Last = original.Last;
             Age = original.Age;
             RatesCounter = original.RatesCounter;
+            
 
             Rates = new int[RatesCounter];
             for (int i = 0; i < RatesCounter; i++){
                 Rates[i] = original.Rates[i];
             }
+        }
+
+        static int getTotal(){ // Static member function created at access the private variable
+            return totalUsers; //  called static int totalUsers;
+
         }
 };
 
@@ -47,6 +56,8 @@ void getUserInfo(User u){
     std::cout << "User's name is " << u.First+" "+ u.Last << " and he is " << u.Age
         << " years old.\n";
 }
+
+int User::totalUsers = 0; // Initializing the static member variable outside the class
 
 int main(){
     User Jordan("Jordan", "Sommerville", 26); //invoking user-defined constructor
@@ -56,6 +67,8 @@ int main(){
     
     getUserInfo(Kwame); // Calling function with object as argument to output initialized variables
     getUserInfo(Jordan);
+
+    std::cout << "Total Users: " << User::getTotal() << std::endl;
     return 0;
     
 }
