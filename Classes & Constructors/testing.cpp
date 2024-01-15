@@ -52,7 +52,7 @@ class User{
         }
 };
 
-void getUserInfo(User u){
+void getUserInfo(User u){       // Function which has Class as argument to access object's variables
     std::cout << "User's name is " << u.First+" "+ u.Last << " and he is " << u.Age
         << " years old.\n";
 }
