@@ -7,29 +7,29 @@ class Pence{
         Pence(int pence) 
             : m_pence{pence} {}
 
-        friend Pence operator+(const Pence& p1, const Pence& p2);
-        friend Pence operator+(const Pence& p1, int value); // Overloaded operators     
-        friend Pence operator+(int p1, const Pence& p2);    // Parameters define which function is called
+        //friend Pence operator+(const Pence& p1, const Pence& p2);
+        //friend Pence operator+(const Pence& p1, int value); // Overloaded operators     
+        //friend Pence operator+(int p1, const Pence& p2);    // Parameters define which function is called
         
-        friend Pence operator-(const Pence& p1, const Pence& p2);
+        //friend Pence operator-(const Pence& p1, const Pence& p2);
 
         int getPence() const {return m_pence;}
 };
 
 Pence operator+(const Pence& p1, const Pence& p2){
-    return p1.m_pence + p2.m_pence;
+    return p1.getPence() + p2.getPence();
 }
 
 Pence operator+(const Pence& p1, int value){
-    return p1.m_pence + value;
+    return p1.getPence() + value;
 }
 
 Pence operator+(int value, const Pence& p2){
-    return value + p2.m_pence;
+    return value + p2.getPence();
 }
 
 Pence operator-(const Pence& p1, const Pence& p2){
-    return p1.m_pence - p2.m_pence;
+    return p1.getPence() - p2.getPence();
 }
 
 int main(){

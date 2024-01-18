@@ -11,12 +11,12 @@ class Fraction{
             std::cout << m_numerator << '/' << m_denominator << std::endl;
         }
 
-        friend Fraction operator*(const Fraction& f1, const Fraction f2);
+        friend Fraction operator*(const Fraction& f1, const Fraction& f2);
         //friend Fraction operator*(const Fraction& f1, int value);
         //friend Fraction operator*(int value, const Fraction f2);
 };
 
-Fraction operator*(const Fraction& f1, const Fraction f2){
+Fraction operator*(const Fraction& f1, const Fraction& f2){
     return Fraction(f1.m_numerator * f2.m_numerator , f1.m_denominator * f2.m_denominator);
 }
 
