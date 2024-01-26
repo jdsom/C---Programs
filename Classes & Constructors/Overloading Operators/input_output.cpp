@@ -27,8 +27,11 @@ std::ostream& operator<<(std::ostream& out, const Point& point){
     return out;
     }
 std::istream& operator>>(std::istream& in, Point& point){
+    std::cout << "Enter x:";
     in >> point.m_x;
+    std::cout << "Enter y:";
     in >> point.m_y;
+    std::cout << "Enter z:";
     in >> point.m_z;
     
     return in;
@@ -42,7 +45,6 @@ int main(){
     Point p2(33.0, 213.2313, 41231.0123);
     Point p3;
 
-    std::cout << "Enter values for p3: ";
     std::cin >> p3;
 
     std::cout << p1 << std::endl << p2 << std::endl << p3 << std::endl;
