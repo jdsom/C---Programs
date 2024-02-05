@@ -15,9 +15,8 @@ class Fraction{
         
         void reduce()
 	{
-		int gcd{ std::gcd(m_numerator, m_denominator) };
-		if (gcd)
-		{
+		int gcd = std::gcd(m_numerator, m_denominator);
+		if (gcd){
 			m_numerator /= gcd;
 			m_denominator /= gcd;
 		}
