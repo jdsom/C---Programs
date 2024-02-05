@@ -6,18 +6,32 @@ class Fraction{
     int m_denominator=1;
     public:
         Fraction(int numerator=0, int denominator=1)
-            : m_numerator{numerator}, m_denominator{denominator} {}
+            : m_numerator{numerator}, m_denominator{denominator} {
+            // We put reduce() in the constructor to ensure any new fractions we make get reduced!
+		    // Any fractions that are overwritten will need to be re-reduced
+            reduce();
+            }
             
-        void print() const{
-            std::cout << m_numerator << '/' << m_denominator << std::endl;
-        }
+        
+        void reduce()
+	{
+		int gcd{ std::gcd(m_numerator, m_denominator) };
+		if (gcd)
+		{
+			m_numerator /= gcd;
+			m_denominator /= gcd;
+		}
+	}
 
         friend Fraction operator*(const Fraction& f1, const Fraction& f2);
         //friend Fraction operator*(const Fraction& f1, int value);
         //friend Fraction operator*(int value, const Fraction f2);
-
         friend std::ostream& operator<<(std::ostream& out, const Fraction& f1);
         friend std::istream& operator>>(std::istream& out, Fraction& f1);
+        
+        void print(){
+            std::cout << m_numerator << '/' << m_denominator << std::endl;
+        }
 };
 
 Fraction operator*(const Fraction& f1, const Fraction& f2){
