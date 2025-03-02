@@ -11,4 +11,5 @@ int main(){
 
     const auto x = 123; // x is a constant of int type
 
+    
 }
